@@ -1,0 +1,14 @@
+footer.sub_footer {
+    background-color: #1C1C1C;
+    padding: 20px;
+}
+
+p.sub-footer-text{
+    color: #6B6B6B;
+}
+
+p.sub-footer-text a{
+    color: #BDBDBD;
+    text-decoration: none;
+}
+
