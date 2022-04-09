@@ -16,8 +16,8 @@ class IndexController extends Controller
         return view('index');
     }
 
-    public function makeReservation()
+    public function myReservations()
     {
-        return view('newReservation');
+        return view('myReservations');
     }
 }

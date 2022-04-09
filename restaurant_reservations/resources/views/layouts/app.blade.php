@@ -43,7 +43,7 @@
 
                         @if (Route::has('index'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('makeReservation') }}">{{ __('New Reservation') }}</a>
+                                    <a class="nav-link" href="{{ route('myReservations') }}">{{ __('My Reservations') }}</a>
                                 </li>
                         @endif
                         <!-- Authentication Links -->
