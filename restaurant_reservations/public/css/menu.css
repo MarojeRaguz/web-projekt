@@ -1,0 +1,10 @@
+table.table-bordered{
+    border-left:1px solid gray;
+    border-right:1px solid gray;
+    margin-top:20px;
+  }
+
+ 
+table.table-bordered > tbody > tr > td{
+    border:1px solid gray!important;
+}

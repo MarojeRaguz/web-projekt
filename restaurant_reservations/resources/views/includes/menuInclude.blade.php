@@ -1,4 +1,6 @@
-<table class="table w-75 p-3 text-center m-auto">
+<link href="{{ asset('css/menu.css') }}" rel="stylesheet">
+
+<table class="table w-75 p-3 text-center m-auto table-bordered">
   <thead class="table-dark border-dark">
     <th>Category</th>
     <th>Price</th>
