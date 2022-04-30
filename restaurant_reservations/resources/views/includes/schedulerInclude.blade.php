@@ -11,7 +11,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" id="saveBtn" class="btn btn-primary">Save changes</button>
+          <button type="button" id="saveBtn" class="btn btn-primary">Make Reservation</button>
         </div>
       </div>
     </div>
@@ -51,7 +51,7 @@
                     {
                     title  : 'reservation2',
                     start  : '2022-04-05',
-                    end    : '2022-04-07'
+                    end    : '2022-04-05'
                     },
                     {
                     title  : 'reservation3',
