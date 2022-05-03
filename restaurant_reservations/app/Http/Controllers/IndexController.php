@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Restaurant; 
 
 class IndexController extends Controller
 {
@@ -13,7 +14,8 @@ class IndexController extends Controller
 
     public function index()
     {
-        return view('index');
+        $data = Restaurant::all();
+        return view('index')->with('data', $data);
     }
 
     public function myReservations()

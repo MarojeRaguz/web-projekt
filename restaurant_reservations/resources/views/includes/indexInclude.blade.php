@@ -13,7 +13,7 @@
       <div class="hovereffect">
             <img class="img-responsive" src="../images/steak1.jpg" alt="">
                   <div class="overlay">
-                     <h2 id="top-title">Restaurant Uno</h2>                  
+                     <h2 id="top-title">{{ $data[0]->name }}</h2>                  
                   </div>
       </div>
    </div> 
