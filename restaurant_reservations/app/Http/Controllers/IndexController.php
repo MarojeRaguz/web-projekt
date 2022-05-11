@@ -3,18 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Restaurant; 
+use App\Interfaces\RestaurantRepositoryInterface;
 
 class IndexController extends Controller
 {
-    /*public function __construct()
+    private $restaurantRepo;
+
+    public function __construct(RestaurantRepositoryInterface $restaurantRepo)
     {
-        $this->middleware('auth');
-    }*/
+        //$this->middleware('auth');
+        $this->restaurantRepo = $restaurantRepo;
+    }
 
     public function index()
     {
-        $data = Restaurant::all();
+        $data = $this->restaurantRepo->getAll();
         return view('index')->with('data', $data);
     }
 
