@@ -10,4 +10,7 @@ class RestaurantController extends Controller
     {
         return view('menu');
     }
+
+
+
 }

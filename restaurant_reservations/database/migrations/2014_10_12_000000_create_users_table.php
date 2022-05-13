@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table->string("role");
-            $table->integer("restaurant_id");
+            $table->string("role")->default("user");
+            $table->integer("restaurant_id")->default(-1);
         });
     }
 

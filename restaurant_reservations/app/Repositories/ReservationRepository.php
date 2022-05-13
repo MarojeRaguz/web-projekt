@@ -40,10 +40,7 @@ class ReservationRepository implements ReservationRepositoryInterface
     public function store(array $data)
     {
         $r = new Reservation();
-        foreach($data as $key => $value) {   
-            if($key == 'password') {
-                $Reservation->$key = Hash::make($data['password']);
-            }        
+        foreach($data as $key => $value) {      
             $r->$key = $value;
         }
         $r->save();

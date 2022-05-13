@@ -67,6 +67,25 @@
                 selectHelper:true,
                 select: function(start,end,allDays){
                     $('#reservationModal').modal('toggle');
+
+                    $('#saveBtn').click(function(){
+                      var startTime = moment(start).format('YYYY-MM-DDTHH:mm');
+                      var endTime = moment(end).format('YYYY-MM-DDTHH:mm');
+                      var restaurantId=1;
+                      console.log(start_date);
+                      $.ajax({
+                        url:"{{  }}",
+                        type:"POST",
+                        dataType:"json",
+                        data:{startTime,endTime,restaurantId},
+                        success:function(response){
+                          console.log(response)
+                        },
+                        error:function(error){
+
+                        }
+                      })
+                    })
                 }
                                 
             })

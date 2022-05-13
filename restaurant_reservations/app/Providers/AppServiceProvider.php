@@ -20,11 +20,6 @@ class AppServiceProvider extends ServiceProvider
         );
 
         $this->app->bind(
-            'App\Interfaces\UserRepositoryInterface',
-            'App\Repositories\UserRepository'
-        );
-
-        $this->app->bind(
             'App\Interfaces\ReservationRepositoryInterface',
             'App\Repositories\ReservationRepository'
         );
