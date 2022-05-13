@@ -18,6 +18,7 @@ return new class extends Migration
             $table->timestamps();
             $table->date("startTime");
             $table->date("endTime");
+            $table->string('status');
             $table->integer('restaurant_id');
             $table->integer('user_id');
         });
