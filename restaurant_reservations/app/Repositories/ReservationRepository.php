@@ -21,6 +21,19 @@ class ReservationRepository implements ReservationRepositoryInterface
         return $r;
     }
 
+    public function getByUserId(int $userId){
+        $r = Reservation::where('user_id',$userId)
+                        ->get();
+        return $r;
+    }
+
+    public function getByRestaurantId(int $restaurantId){
+        $r = Reservation::where('restaurant_id',$restaurantId)
+                        ->get();
+        return $r;
+    }
+
+
     public function delete(int $id)
     {
         $r = Reservation::findOrFail($id);

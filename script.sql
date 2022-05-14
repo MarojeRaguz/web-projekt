@@ -99,5 +99,11 @@ insert into menus values
 	(84,"Burgers","Veggie Burgers", 26,1),
     (85,"Burgers","Veggie Burgers", 26,2),
     (86,"Burgers","Veggie Burgers", 26,3),
-    (87,"Burgers","Veggie Burgers", 26,4)
-    
+    (87,"Burgers","Veggie Burgers", 26,4);
+insert into reservations values
+(1,'2022-05-15','2022-05-15','pending',1,1),
+(2,'2022-05-16','2022-05-15','pending',1,2),
+(3,'2022-05-17','2022-05-15','pending',2,1),
+(4,'2022-05-18','2022-05-15','pending',2,2),
+(5,'2022-05-17','2022-05-15','accepted',4,1),
+(6,'2022-05-18','2022-05-15','canceled',3,1);
