@@ -17,8 +17,8 @@ class IndexController extends Controller
 
     public function index()
     {
-        $data = $this->restaurantRepo->getAll();
-        return view('index')->with('data', $data);
+        $restaurants = $this->restaurantRepo->getAll();
+        return view('index')->with('restaurants', $restaurants);
     }
 
     public function myReservations()
