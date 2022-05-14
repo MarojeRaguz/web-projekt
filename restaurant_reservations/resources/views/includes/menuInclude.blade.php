@@ -5,39 +5,22 @@
     <th>Category</th>
     <th>Price</th>
   </thead>
-  
   <tbody >
-    <tr class="border-left-1">
-        <th colspan="2" class="table-warning">PASTA</th>
-    </tr>
-    <tr>
-        <td>pasta</td>
-        <td>2$</td>
-    </tr>
-    <tr>
-        <td>pasta</td>
-        <td>2$</td>
-    </tr>
-    <tr>
-        <td>pasta</td>
-        <td>2$</td>
-    </tr>
-    <tr>
-        <th colspan="2" class="table-warning">GRILL</th>
-    </tr>
-    <tr>
-        <td>grill</td>
-        <td>2$</td>
-    </tr>
-    <tr>
-        <td>pasta</td>
-        <td>2$</td>
-    </tr>
-    <tr>
-        <td>pasta</td>
-        <td>2$</td>
-    </tr>
-
-    
+    @for($i=0;$i<sizeof($menu);$i++)
+        @if ($i==0)
+        <tr>
+            <th colspan="2" class="table-warning">{{ $menu[$i]->category }}</th>
+        </tr>
+        @elseif($menu[$i]->category != $menu[$i-1]->category )
+            <tr>
+                <th colspan="2" class="table-warning">{{ $menu[$i]->category }}</th>
+            </tr>
+        @else
+        <tr>
+            <td>{{ $menu[$i]->meal }}</td>
+            <td>{{ $menu[$i]->price }} $</td>
+        </tr>
+        @endif
+    @endfor
 </tbody>
 </table>

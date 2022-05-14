@@ -21,6 +21,13 @@ class MenuRepository implements MenuRepositoryInterface
         return $r;
     }
 
+    public function getByRestaurantID(int $restaurantId){
+        $r = Menu::where('restaurant_id',$restaurantId)
+                    ->orderBy('category','desc')
+                    ->get();
+        return $r;
+    }
+
     public function delete(int $id)
     {
         $r = Menu::findOrFail($id);

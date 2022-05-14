@@ -13,5 +13,6 @@ interface MenuRepositoryInterface
     public function update(array $data); 
 
     public function store(array $data);
+    public function getByRestaurantID(int $restaurantId);
 
 }
