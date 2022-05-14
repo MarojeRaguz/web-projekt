@@ -19,6 +19,9 @@
                         </div>
             </div>
          </div> 
+      @if ($i == sizeof($restaurants)-1)
+         </div>
+      @endif
    @else
       <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12" onclick="openMenu({{ $restaurants[$i]->id }})">
          <div class="hovereffect">
