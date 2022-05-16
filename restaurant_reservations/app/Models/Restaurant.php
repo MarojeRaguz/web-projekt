@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Restaurant extends Model
 {
     use HasFactory;
-
+    public $timestamps = false;
+    
     public function menu()
     {
         return $this->hasOne(Menu::class);

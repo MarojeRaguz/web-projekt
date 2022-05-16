@@ -5,8 +5,6 @@
 <link href="{{ asset('css/indexInclude.css') }}" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap" rel="stylesheet">
 
-<script src="{{ asset('js/index.js') }}" defer></script>
-
 @for($i=0; $i<sizeof($restaurants);$i++)
    @if ($i%2==0)
       <div class="row">

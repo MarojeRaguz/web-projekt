@@ -22,7 +22,14 @@
         <td>{{ $reservation->id }}</td>
         <td>{{ $reservation->restaurant_id }}</td>
         <td>{{ $reservation->startTime }}</td>
-        <td><button class="btn btn-danger" >cancel</button></td>
+        <td>
+          @if($reservation->status!="canceled")
+          <button onclick="reservationDelete( {{ $reservation->id }})" class="btn btn-danger" >cancel</button>
+          @else    
+          <button onclick="reservationDelete( {{ $reservation->id }})" class="btn btn-danger" >delete</button>
+
+          @endif
+        </td>
         </tr> 
       @endforeach
   @else
@@ -32,21 +39,21 @@
             <td>{{ $reservation->id }}</td>
             <td>{{ $reservation->restaurant_id }}</td>
             <td>{{ $reservation->startTime }}</td>
-            <td><button class="btn btn-danger invisible ">accept</button> <button class="btn btn-danger">cancel</button></td>
+            <td></td>
             </tr> 
         @elseif($reservation->status=="pending")
           <tr >
           <td>{{ $reservation->id }}</td>
           <td>{{ $reservation->restaurant_id }}</td>
           <td>{{ $reservation->startTime }}</td>
-          <td><button class="btn btn-success " >accept</button> <button class="btn btn-danger" >cancel</button></td>
+          <td><button class="btn btn-success " onclick="accept( {{ $reservation->id }})" >accept</button> <button class="btn btn-danger" >cancel</button></td>
           </tr> 
         @else
           <tr class="table-danger">
           <td>{{ $reservation->id }}</td>
           <td>{{ $reservation->restaurant_id }}</td>
           <td>{{ $reservation->startTime }}</td>
-          <td><button  class="btn btn-success" >accept</button> <button  class="btn btn-danger" >delete</button></td>
+          <td></td>
           </tr> 
         @endif
       

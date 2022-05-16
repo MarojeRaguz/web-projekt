@@ -59,4 +59,12 @@ class ReservationRepository implements ReservationRepositoryInterface
         $r->save();
     }
 
+    public function changeStatus(string $status, int $id)
+    {
+        $r = $this->getByID($id);
+        $r->status = $status;
+        $r->save();
+    }
+    
+
 }

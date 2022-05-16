@@ -18,4 +18,6 @@ interface ReservationRepositoryInterface
 
     public function store(array $data);
 
+    public function changeStatus(string $status, int $id);
+
 }
