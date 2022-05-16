@@ -46,7 +46,8 @@
           <td>{{ $reservation->id }}</td>
           <td>{{ $reservation->restaurant_id }}</td>
           <td>{{ $reservation->startTime }}</td>
-          <td><button class="btn btn-success " onclick="accept( {{ $reservation->id }})" >accept</button> <button class="btn btn-danger" >cancel</button></td>
+          <td><button class="btn btn-success " onclick="accept( {{ $reservation->id }})" >accept</button>
+           <button class="btn btn-danger" onclick="cancel( {{ $reservation->id }})">cancel</button></td>
           </tr> 
         @else
           <tr class="table-danger">
