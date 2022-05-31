@@ -3,17 +3,22 @@ function openMenu(n) {
     location.href = url;
 }
 
-function reservationDelete(restaurant_id) { //delete
-    let url = "reservation-deleted/" + restaurant_id;
+function reservationDelete(reservation_id) { //delete
+    let url = "reservation-deleted/" + reservation_id;
     location.href = url;
 }
-function cancel(restaurant_id) { //change state of req- PUT
-    let url = "restaurant-reservation-canceled/" + restaurant_id;
+function cancel(reservation_id) { //change state of req- PUT
+    let url = "restaurant-reservation-canceled/" + reservation_id;
     location.href = url;
 }
 
-function accept(restaurant_id) { //PUT
-    let url = "reservation-accepted/" + restaurant_id;
+function accept(reservation_id) { //PUT
+    let url = "reservation-accepted/" + reservation_id;
+    location.href = url;
+}
+
+function acceptEmail(reservation_id) {
+    let url = "reservation-accepted/" + reservation_id;
     location.href = url;
 }
     
