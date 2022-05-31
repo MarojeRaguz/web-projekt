@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->date("startTime");
-            $table->date("endTime");
+            $table->datetime("startTime");
+            $table->datetime("endTime");
             $table->string('status');
             $table->integer('restaurant_id');
             $table->integer('user_id');

@@ -9,6 +9,7 @@ class Reservation extends Model
 {
     use HasFactory;
     public $timestamps = false;
+    protected $fillable = ['startTime', 'endTime', 'status','restaurant_id','user_id'];
 
     public function restaurant() 
     {

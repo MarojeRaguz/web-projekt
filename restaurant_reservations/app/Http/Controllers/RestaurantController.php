@@ -7,8 +7,10 @@ use App\Interfaces\RestaurantRepositoryInterface;
 use App\Interfaces\ReservationRepositoryInterface;
 use App\Interfaces\UserRepositoryInterface;
 use Illuminate\Http\Request;
+use App\Models\Reservation;
 use App\Mail\ReservationAccepted;
 use App\Mail\ReservationRejected;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 class RestaurantController extends Controller
@@ -33,9 +35,25 @@ class RestaurantController extends Controller
 
     public function menu($restaurantId)
     {
+        
         $menu = $this->menuRepo->getByRestaurantID($restaurantId);
         $restaurant = $this->restaurantRepo->getByID($restaurantId);
-        return view('menu')->with('menu',$menu)->with('restaurantName',$restaurant->name);
+
+        $events = array();
+
+        $reservations = $this->reservationRepo->getByRestaurantId($restaurantId);
+        foreach($reservations as $reservation){
+            if($reservation->status == "accepted"){
+                $events[] = [
+                    'id'   => $reservation->id,
+                    'title' => Auth::user()->name,
+                    'start' => $reservation->startTime,
+                    'end' => $reservation->endTime,
+                ];
+            }
+        }
+
+        return view('menu', ['events' => $events])->with('menu',$menu)->with('restaurant',$restaurant);
     }
 
     public function accept($reservationID)
@@ -66,12 +84,27 @@ class RestaurantController extends Controller
         Mail::to($user->email)->send(new ReservationAccepted($restaurant, $reservation, $user));
     }
 
+    
     public function mailForRejected($reservationID)
     {
         $reservation = $this->reservationRepo->getByID($reservationID);
         $user = $this->userRepo->getByID($reservation->user_id);    
         $restaurant = $this->restaurantRepo->getByID($reservation->restaurant_id);
         Mail::to($user->email)->send(new ReservationRejected($restaurant, $reservation, $user));
+    }
+
+    public function store(Request $request){
+
+        $reservation= Reservation::create([
+            'startTime' => $request->startTime,
+            'endTime' => $request->endTime,
+            'status' => $request->status,
+            'restaurant_id' => $request->restaurant_id,
+            'user_id' => $request->user_id
+        ]
+        );
+        return response()->json($reservation);
+
     }
 
 }

@@ -9,6 +9,7 @@ Route::get('/restaurant/menu/{id}', [App\Http\Controllers\RestaurantController::
 Route::get('/reservation-accepted/{id}', [App\Http\Controllers\RestaurantController::class, 'accept']);
 Route::get('/restaurant-reservation-canceled/{id}', [App\Http\Controllers\RestaurantController::class, 'cancel']);
 Route::get('/reservation-deleted/{id}', [App\Http\Controllers\RestaurantController::class, 'delete']);
+Route::post('/reservation-create', [App\Http\Controllers\RestaurantController::class, 'store'])->name('reservation.store');
 Auth::routes();
 
 
