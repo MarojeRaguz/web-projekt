@@ -5,11 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-<<<<<<< HEAD
-        'reference' => '42f3e49d1a69ba6d1cba5f132a1af800e17e936b',
-=======
-        'reference' => '559d3093ca359fd0cb4cc1f488d6ed189727ada2',
->>>>>>> c22d25a9708fbfa826f440d4e1691ec293a09230
+        'reference' => '26f8d1d58e6773bbcf3abd509356c9b0b51e6924',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -383,11 +379,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-<<<<<<< HEAD
-            'reference' => '42f3e49d1a69ba6d1cba5f132a1af800e17e936b',
-=======
-            'reference' => '559d3093ca359fd0cb4cc1f488d6ed189727ada2',
->>>>>>> c22d25a9708fbfa826f440d4e1691ec293a09230
+            'reference' => '26f8d1d58e6773bbcf3abd509356c9b0b51e6924',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -567,8 +559,6 @@
             'reference' => '4f7fd7836c6f332bb2933569e566a0d6c4cbed74',
             'dev_requirement' => true,
         ),
-<<<<<<< HEAD
-=======
         'php-http/async-client-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
@@ -581,7 +571,6 @@
                 0 => '*',
             ),
         ),
->>>>>>> c22d25a9708fbfa826f440d4e1691ec293a09230
         'phpdocumentor/reflection-common' => array(
             'pretty_version' => '2.2.0',
             'version' => '2.2.0.0',
@@ -1078,8 +1067,6 @@
             'reference' => '8661b74dbabc23223f38c9b99d3f8ade71170430',
             'dev_requirement' => false,
         ),
-<<<<<<< HEAD
-=======
         'symfony/http-client' => array(
             'pretty_version' => 'v6.1.0',
             'version' => '6.1.0.0',
@@ -1104,7 +1091,6 @@
                 0 => '3.0',
             ),
         ),
->>>>>>> c22d25a9708fbfa826f440d4e1691ec293a09230
         'symfony/http-foundation' => array(
             'pretty_version' => 'v6.0.7',
             'version' => '6.0.7.0',
@@ -1132,8 +1118,6 @@
             'reference' => 'f7343f94e7afecca2ad840b078f9d80200e1bd27',
             'dev_requirement' => false,
         ),
-<<<<<<< HEAD
-=======
         'symfony/mailgun-mailer' => array(
             'pretty_version' => 'v6.1.0',
             'version' => '6.1.0.0',
@@ -1143,7 +1127,6 @@
             'reference' => '44d3c15049d84f5165917a6190f06adbe64d71dd',
             'dev_requirement' => false,
         ),
->>>>>>> c22d25a9708fbfa826f440d4e1691ec293a09230
         'symfony/mime' => array(
             'pretty_version' => 'v6.0.7',
             'version' => '6.0.7.0',

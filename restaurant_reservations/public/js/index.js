@@ -17,8 +17,4 @@ function accept(reservation_id) { //PUT
     location.href = url;
 }
 
-function acceptEmail(reservation_id) {
-    let url = "reservation-accepted/" + reservation_id;
-    location.href = url;
-}
     

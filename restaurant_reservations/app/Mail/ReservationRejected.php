@@ -10,10 +10,9 @@ use \App\Models\Reservation;
 use \App\Models\User;
 use \App\Models\Restaurant;
 
-class ReservationAccepted extends Mailable
+class ReservationRejected extends Mailable
 {
     use Queueable, SerializesModels;
-
     public $reservation;
     public $user;
     public $restaurant;
@@ -29,6 +28,6 @@ class ReservationAccepted extends Mailable
     public function build()
     {
         return $this->from($this->user->email)
-                    ->view('emails.acceptedEmail');
+                    ->view('emails.rejectedEmail');
     }
 }
