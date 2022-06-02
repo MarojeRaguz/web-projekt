@@ -46,7 +46,6 @@ class RestaurantController extends Controller
             if($reservation->status == "accepted"){
                 $events[] = [
                     'id'   => $reservation->id,
-                    'title' => Auth::user()->name,
                     'start' => $reservation->startTime,
                     'end' => $reservation->endTime,
                 ];

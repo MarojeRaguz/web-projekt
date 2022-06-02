@@ -9,6 +9,7 @@ use Illuminate\Queue\SerializesModels;
 use \App\Models\Reservation;
 use \App\Models\User;
 use \App\Models\Restaurant;
+use Illuminate\Support\Facades\Auth; 
 
 class ReservationRejected extends Mailable
 {
@@ -27,7 +28,7 @@ class ReservationRejected extends Mailable
 
     public function build()
     {
-        return $this->from($this->user->email)
+        return $this->from(Auth::user()->email)
                     ->view('emails.rejectedEmail');
     }
 }

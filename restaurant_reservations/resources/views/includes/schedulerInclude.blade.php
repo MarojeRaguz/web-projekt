@@ -79,11 +79,11 @@
                       data:{startTime,endTime,status,restaurant_id,user_id},
                       success:function(response){
                         $('#reservationModal').modal('hide')
-                        $('#calendar').fullCalendar('renderEvent', {
-                            'title': "{{Auth::user()->name  }}",
-                            'start' : response.startTime,
-                            'end'  : response.endTime,
-                        });
+                        // $('#calendar').fullCalendar('renderEvent', {
+                        //     'title': "{{Auth::user()->name  }}",
+                        //     'start' : response.startTime,
+                        //     'end'  : response.endTime,
+                        // });
                       },
                       error:function(error){
                         console.log(error)

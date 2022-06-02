@@ -21,7 +21,7 @@
         @endif
         <td>{{ $reservation->id }}</td>
         <td>{{ $reservation->restaurant_id }}</td>
-        <td>{{ $reservation->startTime }}</td>
+        <td>{{ $reservation->startTime }} - {{ $reservation->endTime }} </td>
         <td>
           @if($reservation->status!="canceled")
           <button onclick="reservationDelete( {{ $reservation->id }})" class="btn btn-danger" >cancel</button>
@@ -38,14 +38,14 @@
             <tr class="table-success">
             <td>{{ $reservation->id }}</td>
             <td>{{ $reservation->restaurant_id }}</td>
-            <td>{{ $reservation->startTime }}</td>
+            <td>{{ $reservation->startTime }} - {{ $reservation->endTime }} </td>
             <td></td>
             </tr> 
         @elseif($reservation->status=="pending")
           <tr >
           <td>{{ $reservation->id }}</td>
           <td>{{ $reservation->restaurant_id }}</td>
-          <td>{{ $reservation->startTime }}</td>
+          <td>{{ $reservation->startTime }} - {{ $reservation->endTime }} </td>
           <td><button class="btn btn-success " onclick="accept( {{ $reservation->id }});" >accept</button>
            <button class="btn btn-danger" onclick="cancel( {{ $reservation->id }})">cancel</button></td>
           </tr> 
@@ -53,7 +53,7 @@
           <tr class="table-danger">
           <td>{{ $reservation->id }}</td>
           <td>{{ $reservation->restaurant_id }}</td>
-          <td>{{ $reservation->startTime }}</td>
+          <td>{{ $reservation->startTime }} - {{ $reservation->endTime }} </td>
           <td></td>
           </tr> 
         @endif
